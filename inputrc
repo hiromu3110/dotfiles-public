@@ -1,0 +1,31 @@
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\C-w": backward-kill-word
+"\eh": "\C-a\eb\ed\C-y\e#man \C-y\C-m\C-p\C-p\C-a\C-d\C-e"
+
+#set bell-style visible
+#set completion-query-items 100
+set completion-ignore-case on
+#set disable-completion on
+#set editing-mode emacs
+#set enable-keypad off
+set expand-tilde off
+#set horizontal-scroll-mode off
+#set keymap emacs
+set mark-directories on
+#set mark-modified-lines off
+#set match-hidden-files on
+#set print-completions-horizontally off
+set show-all-if-ambiguous on
+set visible-stats on
+
+#set convert-meta off
+#set input-meta on
+#set output-meta on
+#set meta-flag on
+
+$if Bash
+  Space: magic-space
+$endif

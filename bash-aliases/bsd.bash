@@ -1,0 +1,10 @@
+# BSD
+alias egrep='egrep --color=auto'
+alias egrepc='egrep --color=always'
+alias fgrep='fgrep --color=auto'
+alias fgrepc='fgrep --color=always'
+alias grep='grep --color=auto'
+alias grepc='grep --color=always'
+#alias ls='ls -Ghv'
+alias ls='ls -Gh'
+alias which='which -a'

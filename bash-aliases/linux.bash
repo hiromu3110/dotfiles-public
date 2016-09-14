@@ -1,0 +1,10 @@
+# GNU
+alias egrep='egrep --color=auto'
+alias egrepc='egrep --color=always'
+alias fgrep='fgrep --color=auto'
+alias fgrepc='fgrep --color=always'
+alias grep='grep --color=auto'
+alias grepc='grep --color=always'
+alias ls='ls -hv --color=auto'
+alias lsc='ls --color=always'
+alias which='which -a'

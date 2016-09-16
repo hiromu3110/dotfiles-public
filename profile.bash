@@ -17,7 +17,7 @@ export PROMPT_COMMAND=''
 
 [ -d "$HOME/tmp" ] && export TMP="$HOME/tmp"
 
-[ which &>/dev/null rbenv ] && eval "$(rbenv init -)"
+[ "$(which 2>/dev/null rbenv)" ] && eval "$(rbenv init -)"
 
 # ctrl+s でスクリーンロックが掛かるのを防ぐ
 stty stop undef

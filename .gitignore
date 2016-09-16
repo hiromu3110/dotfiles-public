@@ -1,0 +1,3 @@
+*.DS_Store
+/custom-profile.bash
+/custom-rc.bash

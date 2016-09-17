@@ -52,11 +52,13 @@ case `uname` in
 esac
 
 # bash-completion を読み込む（読み込み済みの場合はスキップ）
-if [ -z "$BASH_COMPLETION_COMPAT_DIR" ]; then
-  [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
-  [ -f /etc/profile.d/bash_completion.sh ] && . /etc/profile.d/bash_completion.sh
-  [ -f ~/etc/profile.d/bash_completion.sh ] && . ~/etc/profile.d/bash_completion.sh
-fi
+for dir in /etc /usr/local/etc ~/etc ; do
+  if [ -z "$BASH_COMPLETION_COMPAT_DIR" ] && \
+     [ -f "$dir"/profile.d/bash_completion.sh ]; then
+    .     "$dir"/profile.d/bash_completion.sh
+    break
+  fi
+done
 
 # シェルに対する設定は .bashrc に書く
 set -o notify

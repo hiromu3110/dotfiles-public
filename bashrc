@@ -1,6 +1,6 @@
 # screen からの呼び出しの場合に .bash_profile を読みにいく
 # .bash_profile で定義した環境変数を上書きする環境が存在するため
-if [ "$WINDOW" ]; then
+if [ "$WINDOW" ] || [ "$DISPLAY" ]; then
   [ -f ~/.bash_profile ] && . ~/.bash_profile
   # 重複する PATH を除去する
   export PATH=`echo $PATH | tr ':' '\n' | sort -u | paste -d: -s -`

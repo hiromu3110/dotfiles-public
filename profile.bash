@@ -30,6 +30,6 @@ stty werase undef
 
 # .bashrc を読み込む
 # ただし，無限ループを防ぐため screen からの呼び出しの場合は何もしない
-if [ -z "$WINDOW" ]; then
+if [ -z "$WINDOW" ] && [ -z "$DISPLAY" ]; then
   [ -f ~/.bashrc ] && . ~/.bashrc
 fi

@@ -5,6 +5,7 @@
 [ "$(which 2>/dev/null gls)" ] && alias ls='gls -h --color=auto'
 [ "$(which 2>/dev/null tree)" ] && alias tree='tree -CN'
 [ "$(which 2>/dev/null mysql)" ] && alias mysql='mysql --default-character-set=utf8'
+[ "$(which 2>/dev/null colordiff)" ] && alias diff='colordiff'
 [ "$(which 2>/dev/null screen)" ] && alias scr='screen -d -R'
 [ ! "$(which 2>/dev/null sudoedit)" ] && alias sudoedit='sudo -e' # define sudoedit unless exists
 

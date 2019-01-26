@@ -32,4 +32,6 @@ stty werase undef
 # ただし，無限ループを防ぐため screen からの呼び出しの場合は何もしない
 if [ -z "$WINDOW" ] && [ -z "$DISPLAY" ]; then
   [ -f ~/.bashrc ] && . ~/.bashrc
+
+  [ "$(which 2>/dev/null fortune)" ] && fortune
 fi

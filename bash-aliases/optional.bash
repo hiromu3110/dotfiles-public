@@ -23,6 +23,6 @@ unset vless
 macvim=~/Applications/MacVim.app/Contents/MacOS/Vim
 if [ -x "$macvim" ]; then
   alias vi="$macvim"
-  alias gvim="$macvim -g >/dev/null"
+  alias gvim="$macvim -g 2>/dev/null"
 fi
 unset macvim

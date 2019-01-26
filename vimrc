@@ -51,6 +51,8 @@ cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
 autocmd FileType c,cc,cpp,cxx,m,java,cs,scala call Set_C()
+autocmd FileType php call Set_PHP()
+autocmd FileType tex call Set_TeX()
 
 function! Set_C()
   set cindent
@@ -59,4 +61,12 @@ function! Set_C()
   set tabstop=4
   set shiftwidth=4
   set softtabstop=0
+endfunction
+
+function! Set_PHP()
+  set cindent
+endfunction
+
+function! Set_TeX()
+  set makeprg=platex\ -output-directory=.\ %
 endfunction

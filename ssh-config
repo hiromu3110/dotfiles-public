@@ -13,6 +13,7 @@ Host ssh.ng.bluemix.net
 Host *
   #IdentityFile ~/.ssh/id_rsa
   #IdentityFile ~/.ssh/id_ecdsa
+  HashKnownHosts no
   ServerAliveInterval 300
   ControlMaster auto
   ControlPath ~/.ssh/mux-%C.sock

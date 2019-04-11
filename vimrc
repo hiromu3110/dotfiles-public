@@ -42,6 +42,9 @@ set softtabstop=0
 if v:version >= 703
   set noundofile
 endif
+if v:version >= 800
+  set nofixendofline
+endif
 
 noremap j  gj
 noremap k  gk
@@ -53,5 +56,6 @@ cnoremap <C-n> <Down>
 filetype plugin indent on
 
 autocmd Filetype c,cpp,cs,java,scala setlocal ts=4 sw=4 ci noet
-autocmd Filetype php                 setlocal ts=2 sw=2 ci et
 autocmd Filetype javascript          setlocal ts=4 sw=4 ci et
+autocmd Filetype php                 setlocal ts=2 sw=2 ci et
+autocmd Filetype gitconfig           setlocal ts=4 sw=4 noet

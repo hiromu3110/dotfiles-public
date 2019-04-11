@@ -26,6 +26,7 @@ stty start undef
 # Ctrl-w を無視（代わりに backward-kill-word を有効化）
 stty werase undef
 
+[ -f ~/dotfiles/functions.bash ] && . ~/dotfiles/functions.bash
 [ -f ~/dotfiles/custom-profile.bash ] && . ~/dotfiles/custom-profile.bash
 
 # .bashrc を読み込む

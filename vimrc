@@ -50,23 +50,8 @@ noremap gk k
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
-autocmd FileType c,cc,cpp,cxx,m,java,cs,scala call Set_C()
-autocmd FileType php call Set_PHP()
-autocmd FileType tex call Set_TeX()
+filetype plugin indent on
 
-function! Set_C()
-  set cindent
-  set noexpandtab
-  set smartindent
-  set tabstop=4
-  set shiftwidth=4
-  set softtabstop=0
-endfunction
-
-function! Set_PHP()
-  set cindent
-endfunction
-
-function! Set_TeX()
-  set makeprg=platex\ -output-directory=.\ %
-endfunction
+autocmd Filetype c,cpp,cs,java,scala setlocal ts=4 sw=4 ci noet
+autocmd Filetype php                 setlocal ts=2 sw=2 ci et
+autocmd Filetype javascript          setlocal ts=4 sw=4 ci et

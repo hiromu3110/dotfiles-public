@@ -1,20 +1,20 @@
 Host bitbucket
-  HostName bitbucket.org
-  User git
+    HostName bitbucket.org
+    User git
 
 Host github
-  HostName github.com
-  User git
+    HostName github.com
+    User git
 
 Host ssh.ng.bluemix.net
-  DynamicForward 1080
-  ControlMaster no
+    DynamicForward 1080
+    ControlMaster no
 
 Host *
-  #IdentityFile ~/.ssh/id_rsa
-  #IdentityFile ~/.ssh/id_ecdsa
-  HashKnownHosts no
-  ServerAliveInterval 300
-  ControlMaster auto
-  ControlPath ~/.ssh/mux-%C.sock
-  ControlPersist 1
+    #IdentityFile ~/.ssh/id_rsa
+    #IdentityFile ~/.ssh/id_ecdsa
+    HashKnownHosts no
+    ServerAliveInterval 300
+    ControlMaster auto
+    ControlPath ~/.ssh/mux-%C.sock
+    ControlPersist 1
